@@ -4,8 +4,8 @@ const routes = require('./routes')
 
 const server = express()
 
+server.use(express.urlencoded({ extended: true })) // responsável por dar funcionalidade ao "req.body" em routes.js
 server.use(express.static('public')) //express observa a pasta public para servir ao servidor os arquivos estáticos (arquivos de estilização)
-
 server.use(routes)
 
 server.set("view engine", "njk")
