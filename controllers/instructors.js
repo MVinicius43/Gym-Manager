@@ -1,6 +1,6 @@
 const fs = require('fs')
-const data = require('./data.json')
-const { age, date } = require('./utils')
+const data = require('../data.json')
+const { age, date } = require('../utils')
 const e = require('express')
 
 exports.index = (req, res) => {
@@ -28,6 +28,11 @@ exports.show = (req, res) => {
 }
 
 //create
+exports.create = (req, res) => {
+    return res.render('instructors/create')
+}
+
+//post
 exports.post = (req, res) => {
 
     // estrutura de validação se todos os dados foram preenchidos
@@ -59,7 +64,7 @@ exports.post = (req, res) => {
     fs.writeFile('data.json', JSON.stringify(data, null, 2), err => {
         if (err) return res.send('Write file error')
 
-        return res.redirect("/instructors")
+        return res.redirect(`/instructors/${id}`)
     })
 }
 
@@ -75,7 +80,7 @@ exports.edit = (req, res) => {
 
     const instructor = {
         ...foundInstructor,
-        birth: date(foundInstructor.birth)
+        birth: date(foundInstructor.birth).iso
     }
 
     return res.render('instructors/edit', {instructor: instructor} )

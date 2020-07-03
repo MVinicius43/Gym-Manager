@@ -1,4 +1,28 @@
 {
+  "members": [
+    {
+      "id": 1,
+      "avatar_url": "https://images.unsplash.com/photo-1483721310020-03333e577078?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1100&q=80",
+      "name": "Vinícius",
+      "email": "mviniciuses@hotmail.com",
+      "birth": 674006400000,
+      "gender": "M",
+      "blood": "AB+",
+      "weight": "82",
+      "height": "188"
+    },
+    {
+      "id": 2,
+      "avatar_url": "https://images.unsplash.com/photo-1548690312-e3b507d8c110?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+      "name": "Laura Dias",
+      "email": "laura@gmail.com",
+      "birth": 643852800000,
+      "gender": "F",
+      "blood": "O+",
+      "weight": "72",
+      "height": "180"
+    }
+  ],
   "instructors": [
     {
       "id": 1,
@@ -8,6 +32,15 @@
       "gender": "M",
       "services": "musculação, crossfit",
       "created_at": 1593619894160
+    },
+    {
+      "id": 2,
+      "avatar_url": "https://images.unsplash.com/photo-1548690312-e3b507d8c110?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+      "name": "Fernanda",
+      "birth": 621388800000,
+      "gender": "F",
+      "services": "swimming",
+      "created_at": 1593795146910
     }
   ]
 }
