@@ -98,7 +98,8 @@ exports.put = (req, res) => {
     const instructor = {
         ...foundInstructor,
         ...req.body,
-        birth: Date.parse(req.body.birth)
+        birth: Date.parse(req.body.birth),
+        id: Number(req.body.id)  //força o id ser um tipo number
     }
 
     data.instructors[index] = instructor
